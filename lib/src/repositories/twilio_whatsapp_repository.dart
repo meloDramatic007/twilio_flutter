@@ -34,6 +34,7 @@ class TwilioWhatsAppRepositoryImpl extends TwilioWhatsAppRepository {
         headers: headers, body: body);
     if (response.statusCode == 201) {
       print('Sms sent Success');
+      print('response data ${response.body}');
       return response.statusCode;
     } else {
       print('Sending Failed');
